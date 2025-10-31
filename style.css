@@ -1,0 +1,156 @@
+/*GERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #faf2e9;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/*HEADER STYLE*/
+header {
+    padding: 15px 4%;
+    background-color: #ffd5d5;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header .interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header a{
+    color: #3a6f43;
+    text-decoration: none;
+    display: inline-block;
+}
+
+header a:hover {
+    color: #fdaaaa;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 60px;
+}
+
+header .btn-teamo button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #fdaaaa;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+}
+
+header .btn-teamo button :hover {
+    box-shadow: 0 0 8px #fdaaaa;
+}
+
+header .logo img {
+    width: 300px;
+    height: auto;
+}
+
+/*TOPO SITE*/
+section.topo-website {
+    padding: 40px 4%;
+}
+
+section.topo-website .flex {
+    align-items: center;
+    justify-content: center;
+}
+
+.topo-website h1 {
+    color: #59ac77;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-website .txt-topo-website h1 span {
+    color: #fdaaaa;
+}
+
+.topo-website .txt-topo-website p {
+    color: #443e55;
+    margin: 40px 0;
+}
+
+.topo-website .img-topo-website {
+    position: relative;
+    animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/* GALERIA DE FOTOS */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.galeria .foto {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.galeria .foto:hover {
+    transform: scale(1.02);
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.galeria .foto:hover img {
+    transform: scale(1);
+}
+
+#galeria {
+    display: none;
+}
