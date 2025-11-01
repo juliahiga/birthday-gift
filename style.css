@@ -69,6 +69,7 @@ header .btn-teamo button {
     color: white;
     border: 0;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 header .btn-teamo button :hover {
@@ -153,4 +154,41 @@ section.topo-website .flex {
 
 #galeria {
     display: none;
+}
+
+#gameContainer {
+    text-align: center;
+    background-color: #ffecec;
+    padding: 30px;
+    width: fit-content;
+    margin: 50px auto;
+    margin-top: 10px;
+}
+
+#gameBoard {
+    background: #f9e0e0
+}
+
+#scoreText {
+    font-size: 60px;
+    color: #59ac77;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#resetBtn {
+    font-size: 20px;
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    background-color: #fdaaaa;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#resetBtn:hover {
+    background-color: #59ac77;
 }

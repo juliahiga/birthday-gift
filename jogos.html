@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
         rel="stylesheet">
     <title>FELIZ ANIVERSARIO GATA</title>
 </head>
-
 <body>
     <header>
         <div class="interface">
@@ -36,25 +34,11 @@
         </div>
     </header>
 
-    <main>
-        <section class="topo-website">
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-topo-website">
-                        <h1>OLÁ MEU XUXUZINHO<span>.</span></h1>
-                        <p>De todas as coisas que já aconteceram na minha vida, de todas as pessoas que já passaram por
-                            mim, de longe você é e sempre vai ser a melhor. Eu te amo mais que tudo nesse mundo, você é
-                            o grande amor da minha vida e espero de coração que goste dessa mini-surpresa que fiz com
-                            carinho pra você.</p>
-                    </div>
-                    <div class="img-topo-website">
-                        <img src="assets/bubline.webp" alt="nois">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
+    <div id="gameContainer">
+        <canvas id="gameBoard" width="400" height="400"></canvas>
+        <div id="scoreText">0</div>
+        <button id="resetBtn">Reiniciar</button>
+    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
