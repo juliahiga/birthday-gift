@@ -9,6 +9,7 @@
 body {
     background-color: #faf2e9;
     height: 100vh;
+    padding-top: 100px;
 }
 
 .interface {
@@ -24,6 +25,11 @@ body {
 header {
     padding: 15px 4%;
     background-color: #ffd5d5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 header nav {
@@ -191,4 +197,34 @@ section.topo-website .flex {
 
 #resetBtn:hover {
     background-color: #59ac77;
+}
+
+.texto-fofo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    padding: 40px;
+    background-color: #faf2e9;
+}
+
+.textinho {
+    max-width: 700px;
+    background-color: #ffecec;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.textinho h1 {
+    color: #fdaaaa;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.textinho p {
+    font-size: 20px;
+    color: #443e55;
+    line-height: 1.8;
 }

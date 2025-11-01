@@ -67,8 +67,36 @@ function criarComida(){
     function posicaoAleatoria(min, max){
         return Math.round((Math.random() * (max - min) + min) / tamanhoUnidade) * tamanhoUnidade;
     }
-    comidaX = posicaoAleatoria(0, larguraJogo - tamanhoUnidade);
-    comidaY = posicaoAleatoria(0, alturaJogo - tamanhoUnidade);
+
+    let tentativas = 0;
+    let valid = false;
+
+    while(!valid && tentativas < 1000){
+        comidaX = posicaoAleatoria(0, larguraJogo - tamanhoUnidade);
+        comidaY = posicaoAleatoria(0, alturaJogo - tamanhoUnidade);
+
+        valid = !cobra.some(parte => parte.x === comidaX && parte.y === comidaY);
+
+        tentativas++;
+    }
+
+    if(!valid){
+        outer:
+        for(let x = 0; x < larguraJogo; x += tamanhoUnidade){
+            for(let y = 0; y < alturaJogo; y += tamanhoUnidade){
+                if(!cobra.some(parte => parte.x === x && parte.y === y)){
+                    comidaX = x;
+                    comidaY = y;
+                    valid = true;
+                    break outer;
+                }
+            }
+        }
+    }
+    if(!valid){
+        comidaX = posicaoAleatoria(0, larguraJogo - tamanhoUnidade);
+        comidaY = posicaoAleatoria(0, alturaJogo - tamanhoUnidade);
+    }
 }
 
 function desenharComida(){
